@@ -1,6 +1,9 @@
 name: First Action
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 jobs:
   lint:
     runs-on: ubuntu-latest
