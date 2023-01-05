@@ -9,11 +9,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "16.x"
-      - uses: tinovyatkin/action-eslint@v1
-        with:
-          repo-token: ${{secrets.GITHUB_TOKEN}}
-          args: --ext .jsx src
-      - run: npm install
+      - run: npm ci
       - run: npm run lint
   test:
     needs: lint
